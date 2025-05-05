@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
-export default function TelaRegistro({ navegacao }) {
+export default function TelaRegistro({ navigation }) {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
@@ -11,7 +11,7 @@ export default function TelaRegistro({ navegacao }) {
       <TextInput style={styles.input} value={email} onChangeText={setEmail} />
       <Text>Senha</Text>
       <TextInput style={styles.input} secureTextEntry value={senha} onChangeText={setSenha} />
-      <Button title="Registrar" onPress={() => navegacao.navigate('BusInfo')} />
+      <Button title="Registrar" onPress={() => navigation.navigate('BusInfo')} />
     </View>
   );
 }

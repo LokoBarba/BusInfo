@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import MapView from 'react-native-maps';
 
-export default function TelaInicial({ navegacao }) {
+export default function TelaInicial({ navigation }) {
   return (
     <View style={styles.container}>
       <MapView
@@ -16,13 +16,13 @@ export default function TelaInicial({ navegacao }) {
         }}
       />
       <View style={styles.icons}>
-        <TouchableOpacity onPress={() => navegacao.navigate('Registro')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Registro')}>
           <Ionicons name="person-add" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navegacao.navigate('Chat')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
           <Ionicons name="chatbubbles-outline" size={28} color="black" />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => navegacao.navigate('Rotas')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Rotas')}>
           <MaterialCommunityIcons name="bus" size={28} color="black" />
         </TouchableOpacity>
       </View>
